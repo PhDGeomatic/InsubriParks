@@ -1,0 +1,56 @@
+version: '3.8'
+
+networks:
+  insubriparks-network:
+    name: insubriparks_network
+    driver: bridge
+
+services:
+  postgres:
+    container_name: insubriparks_database
+    hostname: ${pg_hostname}    
+    image: insubriparks_database:1.0.0
+    build:
+      context: ./postgresql
+      dockerfile: Dockerfile
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-q", "-d", "postgres", "-U", "root" ]
+      timeout: 45s
+      interval: 10s
+      retries: 10
+    restart: always
+    environment:
+      - POSTGRES_USER=${pg_username}
+      - POSTGRES_PASSWORD=${pg_password}
+      - APP_DB_NAME=${app_database}
+      - APP_DB_USER=${app_username}
+      - APP_DB_PASS=${app_password}      
+    ports:
+      - '${exposed_pg_port}:${pg_port}'
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    networks:
+      - insubriparks-network
+
+  payara:
+    container_name: insubriparks_dashboard
+    image: insubriparks_dashboard:1.0.0
+    build:
+      context: ./payara
+      dockerfile: Dockerfile
+    environment:     
+      PG_HOST: ${pg_hostname}
+      PG_PORT: ${pg_port}
+      PG_DB: ${app_database}
+      PG_USR: ${app_username}
+      PG_PWD: ${app_password}
+      DATA_DIR: ${data_dir}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "${exposed_dashboard_port}:8080"
+    volumes:
+      - ./uploads:${data_dir}/uploads
+    networks:
+      - insubriparks-network
