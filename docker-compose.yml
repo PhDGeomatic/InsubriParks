@@ -24,7 +24,7 @@ services:
       - POSTGRES_PASSWORD=${pg_password}
       - APP_DB_NAME=${app_database}
       - APP_DB_USER=${app_username}
-      - APP_DB_PASS=${app_password}      
+      - APP_DB_PASS=${app_password}
     ports:
       - '${exposed_pg_port}:${pg_port}'
     volumes:
@@ -45,6 +45,7 @@ services:
       PG_USR: ${app_username}
       PG_PWD: ${app_password}
       DATA_DIR: ${data_dir}
+      API_URL: ${api_url}
     depends_on:
       postgres:
         condition: service_healthy
