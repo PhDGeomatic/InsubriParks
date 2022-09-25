@@ -54,3 +54,16 @@ services:
       - ./uploads:${data_dir}/uploads
     networks:
       - insubriparks-network
+
+  nginx:
+    container_name: insubriparks_nginx
+    image: nginx:1.23.1
+    ports:
+      - "80:80"
+    volumes: 
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - payara
+    networks:
+      - insubriparks-network
+
