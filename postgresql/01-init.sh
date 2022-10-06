@@ -35,7 +35,9 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-E
       message character varying,
       id_interaction integer,
       created_at timestamp with time zone,
+      to_send boolean,
       sent boolean,
+      sent_at timestamp with time zone,
       CONSTRAINT messages_pkey PRIMARY KEY (id),
       CONSTRAINT messages_fkey FOREIGN KEY (id_interaction)
         REFERENCES interactions (id) MATCH SIMPLE
