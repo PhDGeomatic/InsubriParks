@@ -23,8 +23,8 @@ pg_password=<PostgreSQL password>
 # If it is not specified, then the value of POSTGRES_USER will be used.
 app_database=<PostgreSQL database>
 # The username and password of the user to create for managing the <app_database>
-app_username=insubriparks_username
-app_password=insubriparks_password
+app_username=<app_database username>
+app_password=<app_database password>
 # The exposed port of the PostgreSQL container
 exposed_pg_port=5432
 
