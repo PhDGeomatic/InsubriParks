@@ -2,11 +2,16 @@
 
 ## Run with Docker Compose
 
-The Dashboard can be integrated directly into the [Geo Collector Bot](https://github.com/opengeolab/geocollectorbot) architecture thanks to [Docker](https://www.docker.com/)'s modularity and [Docker Compose](https://docs.docker.com/compose/) integration.
+The Dashboard can be integrated directly into the [Geo Collector Bot](https://github.com/opengeolab/geocollectorbot) architecture thanks to [Docker](https://www.docker.com/) modularity.  
+[Docker Compose](https://docs.docker.com/compose/) allows to define and run these Docker applications:
+ - PostgreSQL
+ - Geo Collector Bot
+ - Dashboard
+ - Nginx
 
 ### Configuration 
 
-Edit the file `.env` and change the environment variables according to the [Geo Collector Bot](https://github.com/opengeolab/geocollectorbot) configuration.
+Edit the file `.env` and change the environment variables according to the database and [Geo Collector Bot](https://github.com/opengeolab/geocollectorbot) settings.
 
 ```bash
 # Database setup
@@ -46,4 +51,8 @@ api_url=bot_server
 docker-compose up -d
 ```
 
-The Dashboard run on http://localhost:8080/InsubriParks_Dashboard
+The Dashboard run on http://<hostname or hostip>:8080/InsubriParks_Dashboard
+
+### Reverse Proxy
+
+NGINX is used as reverse proxy in order to expose both the Dashboard and the Bot on the same http/https port.
