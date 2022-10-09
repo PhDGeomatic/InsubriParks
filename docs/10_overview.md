@@ -12,3 +12,5 @@ In detail, for each collected data it is possible to:
 The Dashboard also allows the system administrators to monitor and analyze all the collected data through numerical statistics, linear graphs, pie diagrams, time trends, etc.
 
 ## Architecture
+
+![Architecture](./img/Architecture.png)
