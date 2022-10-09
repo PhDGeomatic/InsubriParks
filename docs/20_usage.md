@@ -50,9 +50,8 @@ api_url=bot_server
 ```bash
 docker-compose up -d
 ```
-
-The Dashboard run on http://<hostname or hostip>:8080/InsubriParks_Dashboard
+The Dashboard run on `http://<hostname or hostip>:8080/InsubriParks_Dashboard`
 
 ### Reverse Proxy
 
-NGINX is used as reverse proxy in order to expose both the Dashboard and the Bot on the same http/https port.
+Using NGINX as reverse proxy, in order to expose both the Dashboard and the Bot on the same http/https port, the Dashboard run also on `http://<hostname or hostip>/InsubriParks_Dashboard`
