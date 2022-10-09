@@ -17,7 +17,7 @@ pg_password=<PostgreSQL password>
 # This optional environment variable can be used to define a different name for the default database that is created when the image is first started.
 # If it is not specified, then the value of POSTGRES_USER will be used.
 app_database=<PostgreSQL database>
-# The username and password of the user to create for managing the <app_database>
+# The username and password of the user created for managing the <app_database>
 app_username=<app_database username>
 app_password=<app_database password>
 # The port of the PostgreSQL is exposed
@@ -25,10 +25,10 @@ exposed_pg_port=<port>
 
 #Dashboard setup
 # The home path of the Dashboard. It's used to set the path where the media files (photo, videos, ...) are uploaded (<data_dir>/uploads).
-data_dir=/home/InsubriParks
+data_dir=<project directory>
 # The port where the Dashboard is exposed
 exposed_dashboard_port=<port>
 
 # host name of the geo_collector_bot container that exposes the API to send messages to the users
-api_url=<geo_collector_bot_hostname>
+api_url=<container hostname>
 ```
