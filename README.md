@@ -10,7 +10,8 @@
 
 </div>
 
-Dashboard to administrate geodata collected with the Telegram bot ["Geo Collector Bot"](https://github.com/opengeolab/geocollectorbot). This web application is developed within the project [INSUBRI.PARKS](https://insubriparksturismo.eu) funded by the Interreg Co-operation Programme Italy–Switzerland 2014 -2020 (ID 605472).
+Dashboard to administrate geodata collected with the Telegram bot ["Geo Collector Bot"](https://github.com/opengeolab/geocollectorbot).  
+This web application is developed within the project [INSUBRI.PARKS](https://insubriparksturismo.eu) funded by the Interreg Co-operation Programme Italy–Switzerland 2014 -2020 (ID 605472).
 
 ## Documentation
 
