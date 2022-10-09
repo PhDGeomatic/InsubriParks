@@ -20,15 +20,15 @@ app_database=<PostgreSQL database>
 # The username and password of the user to create for managing the <app_database>
 app_username=<app_database username>
 app_password=<app_database password>
-# The exposed port of the PostgreSQL container
-exposed_pg_port=5432
+# The port of the PostgreSQL is exposed
+exposed_pg_port=<port>
 
 #Dashboard setup
 # The home path of the Dashboard. It's used to set the path where the media files (photo, videos, ...) are uploaded (<data_dir>/uploads).
 data_dir=/home/InsubriParks
 # The port where the Dashboard is exposed
-exposed_dashboard_port=8080
+exposed_dashboard_port=<port>
 
-# host name of the container that exposes the API to send messages to the users
-api_url=bot_server
+# host name of the geo_collector_bot container that exposes the API to send messages to the users
+api_url=<geo_collector_bot_hostname>
 ```
