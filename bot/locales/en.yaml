@@ -1,53 +1,56 @@
 commands:
-  start: |
-    Hello from Geo Collector Bot\!
-    Start collecting data with the */collect* command
+    start: |
+      Hello from Insubriparks Geo Collector Bot\!
+      Start collecting data with the */collect* command
 
-  help: |
-    This Bot designed for for easily sharing problems that you may discover while you visit a regional park\.
+    help: |
+      This Bot is designed for collecting data through a flow of questions\.
 
-    The commands you have at your disposal are:
-    \- */collect* to start the collect process
-    \- */abort* to stop the collect process
+      The commands you have at your disposal are:
+      \- */collect* to activate a new report collection
+      \- */abort* to cancel an ongoing report collection
 
 events:
-  callbackQueryOptionSelected: "You selected: *{{selectedText}}*"
+    callbackQueryOptionSelected: "You selected: *{{selectedText}}*"
 
-  interactionCompleted: Your data have been received correctly\. Thank you for your report\!
+    interactionCompleted: Thank you, your report has been registered correctly\!
 
-  interactionAborted: |
-    Your current interaction has been aborted correctly\.
-    Start a new one with the */collect* command
+    interactionAborted: |
+      Your current report has been canceled correctly\.
+      Start a new one with the */collect* command
 
 keyboards:
-  location: Send my current location
+    location: Send my current location
 
 errors:
-  unknown: Ops, something went wrong on our hand\. Please, try again later
+    unknown: Ops, something went wrong on our hand\. Please, try again later
 
-  chatIdNotFound: Sorry, I couldn't recognize this chat
+    chatIdNotFound: Sorry, I couldn't recognize this chat
 
-  ongoingInteractionAlreadyExists: |
-    It seeems you alredy have an ongoing interaction\.
-    Please, complete it or abort it with the */abort* commad\.
+    ongoingInteractionAlreadyExists: |
+      It seems you already have an ongoing report\.
+      Please, complete it or cancel it with the */abort* command
 
-  retrieveInteraction: We are experiencing problems retrieving your data\. Please, try again later
+    retrieveInteraction: We are experiencing problems retrieving your data\. Please, try again later
 
-  createInteraction: We are experiencing problems persisting you data\. Please, try again later
+    createInteraction: We are experiencing problems persisting you data\. Please, try again later
 
-  abortInteraction: We are experiencing problems aborting your current interaction\. Please, try again later
+    abortInteraction: We are experiencing problems canceling your current interaction\. Please, try again later
 
-  updateInteraction: We are experiencing problems saving your answer\. Please, try again later
+    updateInteraction: We are experiencing problems saving your answer\. Please, try again later
 
-  noInteractionsFound: It seems you don't have any ongoing interaction\. Start one with the */collect* command
+    noInteractionsFound: It seems you don't have any ongoing report\. Start one with the */collect* command
 
-  tooManyInteractionsFound: It seems you have multiple ongoing interactions
+    tooManyInteractionsFound: It seems you have multiple ongoing reports
 
-  unknownStep: Sorry, I couldn't determine the state of your interaction
+    unknownStep: Sorry, I couldn't determine the state of your report
 
-  wrongStepType: The answer you have provided is not suitable for the question\. Please, try again
+    wrongStepType: The answer you have provided is not suitable for the question\. Please, try again
 
-  unknownOption: The answer you have selected is not valid\. Please, try again
+    wrongMediaType: "This question only accepts {{acceptedMediaType}} messages\\. Please, try again"
 
-  savingMedia: We could not save your media\. Please, try again
+    unknownOption: The answer you have selected is not valid\. Please, try again
 
+    savingMedia: We could not save your media\. Please, try again
+
+    unsupportedUpdateType: Sorry, we currently do not support this type of messages\. Please, try again
