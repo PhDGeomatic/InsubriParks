@@ -85,7 +85,10 @@ services:
       - bot
     ports:
       - "80:80"
+      - "443:443"
+      - "8443:8443"
     volumes:
-      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/ssl:/etc/nginx/ssl
     networks:
       - insubriparks-network

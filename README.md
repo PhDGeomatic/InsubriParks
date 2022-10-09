@@ -20,6 +20,21 @@ To know how the Dashboard works you can follow the documentation:
 * [usage](./docs/20_usage.md)
 * [configuration](./docs/30_configuration.md)
 
+## Enable SSL
+
+On the machine, run
+
+```shell
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ./nginx/ssl/nginx-selfsigned.key -out ./nginx/ssl/nginx-selfsigned.crt
+sudo openssl dhparam -out ./nginx/ssl/dhparam.pem 4096
+```
+
+### Resources
+
+- https://mpolinowski.github.io/docs/DevOps/NGINX/2020-08-27--nginx-docker-ssl-certs-self-signed/2020-08-27/
+- https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-22-04
+- https://codingwithmanny.medium.com/configure-self-signed-ssl-for-nginx-docker-from-a-scratch-7c2bcd5478c6
+
 ## Contributions
 
 [GEOlab](http://www.geolab.polimi.it/) - Politecnico di Milano (contact: [Daniele Oxoli](mailto:daniele.oxoli@polimi.it))
