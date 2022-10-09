@@ -15,15 +15,15 @@ Dashboard to administrate geodata collected with the Telegram bot ["Geo Collecto
 ## Documentation
 
 To know how the Dashboard works you can follow the documentation:
-* [overview]()
-* [usage]()
-* [configuration]()
+* [overview](./docs/10_overview.md)
+* [usage](./docs/20_usage.md)
+* [configuration](./docs/30_configuration.md)
 
 ## Contributions
 
 [GEOlab](http://www.geolab.polimi.it/) - Politecnico di Milano (contact: [Daniele Oxoli](mailto:daniele.oxoli@polimi.it))
 
-Developed by G.Z. (GeoDev) - [GitHub](https://github.com/PhDGeomatic)
+Developed by G.Z. - GeoDev@[PhDGeomatic](https://github.com/PhDGeomatic)
 
 ## License
 
