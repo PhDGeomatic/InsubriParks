@@ -1,7 +1,7 @@
 
 ### Configuration 
 
-Edit the file `.env` and change the environment variables according to the [Geo Collector Bot](https://github.com/opengeolab/geocollectorbot) configuration.
+Edit the file `.env` and change the environment variables according to the [Geo Collector Bot](https://github.com/opengeolab/geocollectorbot) settings.
 
 ```bash
 # Database setup
