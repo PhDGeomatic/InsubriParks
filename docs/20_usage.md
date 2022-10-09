@@ -11,7 +11,7 @@ Edit the file `.env` and change the environment variables according to the [Geo 
 ```bash
 # Database setup
 pg_hostname=<host name of PostgreSQL container>
-pg_port=<PostgreSQL port>
+pg_port=<PostgreSQL container port>
 
 # This optional environment variable is used in conjunction with POSTGRES_PASSWORD to set a user and its password.
 # This variable will create the specified user with superuser power and a database with the same name.
