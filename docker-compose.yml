@@ -61,11 +61,12 @@ services:
       PG_DB: ${app_database}
       PG_USR: ${app_username}
       PG_PWD: ${app_password}
-      PORT: 8080
-      LOG_LEVEL: trace
-      TELEGRAM_AUTH_TOKEN: ${telegram_auth_token}
-      UPDATE_MODE: polling
-      GET_MEDIA_BASE_PATH: /uploads
+      LOG_LEVEL: ${bot_log_level}
+      PORT: ${bot_internal_port}
+      TELEGRAM_AUTH_TOKEN: ${bot_telegram_auth_token}
+      UPDATE_MODE: ${bot_update_mode}
+      PUBLIC_URL: ${bot_public_url}
+      GET_MEDIA_BASE_PATH: ${bot_get_media_base_path}
     depends_on:
       postgres:
         condition: service_healthy
