@@ -20,9 +20,9 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-E
     
   COMMIT;
   BEGIN;
-    INSERT INTO messages (id, created_at, status, message, id_interaction, sent) VALUES (1, '2022-02-18', 1, 'message 1', 100, false);
-    INSERT INTO messages (id, created_at, status, message, id_interaction, sent) VALUES (2, '2022-02-19', 1, 'message 2', 100, true);
-    INSERT INTO messages (id, created_at, status, message, id_interaction, sent) VALUES (3, '2022-03-20', 2, 'message 3', 101, false);
-    INSERT INTO messages (id, created_at, status, message, id_interaction, sent) VALUES (4, '2022-07-21', 3, 'message 4', 102, true);
+    INSERT INTO messages (id, created_at, status, message, id_interaction, sent) VALUES (1000, '2022-02-18', 1, 'message 1', 100, false);
+    INSERT INTO messages (id, created_at, status, message, id_interaction, sent) VALUES (1001, '2022-02-19', 1, 'message 2', 100, true);
+    INSERT INTO messages (id, created_at, status, message, id_interaction, sent) VALUES (1002, '2022-03-20', 2, 'message 3', 101, false);
+    INSERT INTO messages (id, created_at, status, message, id_interaction, sent) VALUES (1003, '2022-07-21', 3, 'message 4', 102, true);
   COMMIT;
 EOSQL
